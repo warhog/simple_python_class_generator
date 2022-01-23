@@ -1,0 +1,37 @@
+---
+class-data:
+  name: Rule
+  base_class: null
+  init_with_setter: true
+  description: rule model class
+  fields:
+    include:
+      datatype: list
+      kwarg: true
+      default: []
+      description: include patterns list
+    exclude:
+      datatype: list
+      kwarg: true
+      default: []
+      description: exclude patterns list
+    uid:
+      datatype: int
+      kwarg: true
+      default: 0
+      description: filesystem uid value
+    gid:
+      datatype: int
+      kwarg: true
+      default: 0
+      description: filesystem gid value
+    mode:
+      datatype: int
+      kwarg: true
+      default: 755
+      description: filesystem mode bits
+    flags:
+      datatype: list
+      kwarg: true
+      default: []
+      description: flags

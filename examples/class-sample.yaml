@@ -1,0 +1,19 @@
+---
+class-data:
+  name: Rule
+  base_class: null
+  fields:
+    data1: {}
+    data2:
+      datatype: bool
+      kwarg: true
+      default: true
+      description: value flag for setting
+    data3:
+      datatype: str
+      kwarg: true
+      default: "'hello'"
+    data4:
+      datatype: int
+      kwarg: false
+      default: 2
