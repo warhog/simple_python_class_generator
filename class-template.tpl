@@ -27,9 +27,9 @@ class {{ name }}{% if base_class %}({{ base_class }}){% endif %}:
 {%- for field in fields: -%}
 {%- if fields[field].kwarg == True %}
     {%- if init_with_setter %}
-        self.set_{{ field }}(kwargs.get('{{ field }}', {{ fields[field].default }}))
+        self.set_{{ field }}(kwargs.get('{{ field }}'{% if fields[field].default %}, {{ fields[field].default }}{% endif %}))
     {%- else %}
-        self.__{{ field }} = kwargs.get('{{ field }}', {{ fields[field].default }})
+        self.__{{ field }} = kwargs.get('{{ field }}'{% if fields[field].default %}, {{ fields[field].default }}{% endif %})
     {%- endif -%}
 {%- endif -%}
 {%- endfor %}
