@@ -1,5 +1,5 @@
 """ {% if description %}{{ description }}{% else %}class implementation{% endif %} """
-
+# pylint: disable=line-too-long
 
 class {{ name }}{% if base_class %}({{ base_class }}){% endif %}:
     """ {% if description %}{{ description }}{% else %}class implementation{% endif %} """
@@ -50,4 +50,7 @@ class {{ name }}{% if base_class %}({{ base_class }}){% endif %}:
             {{field}} ({% if fields[field].datatype %}{{ fields[field].datatype }}{% else %}[type]{% endif %}): {% if 'description' in fields[field] %}{{ fields[field].description }}{% else %}[description]{% endif %}
         """
         self.__{{ field }} = {{ field }}
-{% endfor -%}
+{% endfor %}
+    def __repr__(self):
+        return f'{{ name }}{% raw %}{{{% endraw %}{% for field in fields %}{{ field }}={self.__{{ field }}}, {% endfor %}'
+
