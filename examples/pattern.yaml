@@ -1,0 +1,14 @@
+---
+class-data:
+  name: Pattern
+  init_with_setter: true
+  description: pattern model class
+  fields:
+    name:
+      datatype: str
+      description: name of the pattern
+      kwarg: true
+    pattern:
+      datatype: str
+      description: the glob pattern
+      kwarg: true

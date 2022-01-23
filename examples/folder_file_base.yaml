@@ -1,0 +1,30 @@
+---
+class-data:
+  name: FolderFileBase
+  init_with_setter: true
+  description: folder and file base class
+  fields:
+    uid:
+      datatype: int
+      kwarg: true
+      default: 0
+      description: filesystem uid value
+      protected: true
+    gid:
+      datatype: int
+      kwarg: true
+      default: 0
+      description: filesystem gid value
+      protected: true
+    mode:
+      datatype: int
+      kwarg: true
+      default: 755
+      description: filesystem mode bits
+      protected: true
+    flags:
+      datatype: list
+      kwarg: true
+      default: []
+      description: flags
+      protected: true

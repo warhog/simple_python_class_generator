@@ -5,6 +5,11 @@ class-data:
   init_with_setter: true
   description: rule model class
   fields:
+    name:
+      datatype: str
+      kwarg: true
+      default: "'<unnamed>'"
+      description: the name of the rule
     include:
       datatype: list
       kwarg: true

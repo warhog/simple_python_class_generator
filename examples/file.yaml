@@ -1,0 +1,10 @@
+---
+class-data:
+  name: File
+  base_class: FolderFileBase
+  init_with_setter: true
+  description: file model class
+  fields:
+    filepath:
+      datatype: str
+      description: the full path of the file

@@ -15,7 +15,7 @@ pip3 install -r requirements.txt
 
 to render a yaml file:
 ```
-python3 classgen.py --input examples/class-rule.yaml --output rule.py
+python3 classgen.py -i examples/\*.yaml -o generated/
 ```
 
 for further options see: `python3 classgen.py --help`.
